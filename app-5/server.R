@@ -2,7 +2,7 @@
 library(read.dbc)
 library(lubridate)
 library(ggplot2)
-nasc <- read.dbc("/home/luiz/Documents/My/AA_UnB/Dataset/DNDF2014.dbc")
+nasc <- read.dbc("DNDF2014.dbc")
 nasc$DTNASC <- as.POSIXct(as.Date(nasc$DTNASC,format="%d%m%Y"))
 
 shinyServer(function(input, output) {
